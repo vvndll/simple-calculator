@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Noto+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="./css/main.css">
+
+    <title>Calculator</title>
+</head>
+<body class="grid">
+
+    <div class="main__container flex">
+
+        <!-- Display -->
+        <div class="display__container flex">
+            <p class="display__history flex"></p>
+            <p class="display__result flex"></p>
+        </div>
+
+
+
+        <!-- Buttons -->
+        <div class="buttons__container flex">
+            <div class="clear flex">
+                <input type="button" value="C" class="btn btn__clearall all" id="clearAll">
+                <input type="button" value="CE" class="btn btn__clearlast last" id="clearLast">
+            </div>
+
+            <div class="second__container flex">
+                <div class="numbers grid">
+                    <input type="button" value="7" class="btn btn__numbers seven" id="seven">
+                    <input type="button" value="8" class="btn btn__numbers eight" id="eight">
+                    <input type="button" value="9" class="btn btn__numbers nine" id="nine">
+                    <input type="button" value="4" class="btn btn__numbers four" id="four">
+                    <input type="button" value="5" class="btn btn__numbers five" id="five">
+                    <input type="button" value="6" class="btn btn__numbers six" id="six">
+                    <input type="button" value="1" class="btn btn__numbers one" id="one">
+                    <input type="button" value="2" class="btn btn__numbers two id="two>
+                    <input type="button" value="3" class="btn btn__numbers three" id="three">
+                    <input type="button" value="0" class="btn btn__numbers zero" id="zero">
+                    <input type="button" value="." class="btn btn__numbers point" id="point">
+                    <input type="button" value="del" class="btn btn__delete delete" id="delete">
+                </div>
+    
+                <div class="operator__container grid">
+                    <div class="operator grid">
+                        <div class="flex" style="gap: .5rem; flex-direction: column;">
+                            <input type="button" value="/" class="btn btn__operator divide" id="divide">
+                            <input type="button" value="+" class="btn btn__operator add" id="add">
+                        </div>
+                        <div class="flex" style="gap: .5rem; flex-direction: column;">
+                            <input type="button" value="x" class="btn btn__operator multiply" id="multiply">
+                            <input type="button" value="-" class="btn btn__operator subtract" id="subtract">
+                            <input type="button" value="%" class="btn btn__operator percent" id="percent">
+                        </div>
+                        <input type="button" value="=" class="btn btn__equals answer" id="answer">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script src="./js/calcu.js"></script>
+</body>
+</html>

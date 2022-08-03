@@ -1,0 +1,39 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    place-items: center;
+
+    padding: 2rem;
+
+    font-family: var(--main-fnt);
+}
+
+input[type=button] {
+    border-style: none;
+
+    color: var(--white-clr);
+
+    background: none;
+
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
