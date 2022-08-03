@@ -19,9 +19,9 @@ let putDecimal = false;
 //Number Buttons
 numberBtn.forEach(number => {
     number.addEventListener("click", (e) => {
-        if (e.target.value === "." && !putDecimal) {
+        if (e.target.value === "." && !putDecimal) { //check if there is a decimal point already. If none, you can put decimal point.
             putDecimal = true;
-        }else if (e.target.value === "." && putDecimal) {
+        }else if (e.target.value === "." && putDecimal) { //check if there is a decimal point already. If there is, you cannot put decimal point.
             return;
         }
         dis2 += e.target.value;
@@ -43,13 +43,13 @@ operatorBtn.forEach(operator => {
         }else {
             result = parseFloat(dis2);
         }
-        moveToHistory(operatorSign);
+        moveToHistory(operatorSign); //Will trigger when an operator was clicked
         prevOperation = operatorSign;
         
     });
 });
 
-
+//Will move the output to history
 const moveToHistory = (sign = "") => {
     dis1 += dis2 + " " + sign + " ";
     displayHistory.innerText = dis1;
@@ -89,20 +89,19 @@ equalsBtn.addEventListener("click", () => {
 clearAll.addEventListener("click", () => {
     dis1 = "";
     dis2 = "";
-    displayHistory.innerText = "";
-    displayResult.innerText = "";
+    displayHistory.innerText = "0";
+    displayResult.innerText = "0";
     result = "";
 });
 
 //Will only clear output in result
 clearLast.addEventListener("click", () => {
-    displayResult.innerText = "";
+    displayResult.innerText = "0";
     dis2 = "";
   });
 
 //Delete numbers
   deleteBtn.addEventListener("click", () => {
-        displayResult.innerText = displayResult.innerText.slice(0, -1);
-        dis2 = dis2.innerText.slice(0, -1);
-
+    displayResult.innerText = displayResult.innerText.slice(0, -1);
+    dis2 = displayResult.innerText;
   })

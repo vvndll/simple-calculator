@@ -5,9 +5,13 @@
 }
 
 body {
+    height: 100vh;
+
     place-items: center;
 
     padding: 2rem;
+
+    background-color: var(--black-clr);
 
     font-family: var(--main-fnt);
 }
