@@ -24,7 +24,16 @@ numberBtn.forEach(number => {
         }else if (e.target.value === "." && putDecimal) { //check if there is a decimal point already. If there is, you cannot put decimal point.
             return;
         }
-        dis2 += e.target.value;
+        if (e.target.value === "%") {
+            dis2 = parseFloat(dis2) * 0.01;
+        }
+
+        if (dis2 && e.target.value === "%") {
+            dis2 = dis2;
+        }else {
+            dis2 += e.target.value
+        }
+        
         displayResult.innerText = dis2;
 
     });
